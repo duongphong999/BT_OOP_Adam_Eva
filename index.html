@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(){
+                this.piece = 10;
+            }
+            getPiece(){
+                return this.piece;
+            }
+            decrease(){
+                return this.piece --;
+            }
+        }
+        class Human{
+            constructor(name,say ,gender,weight){
+                this.name = name;
+                this.gender = gender;
+                this.say = say;
+                this.weight = weight;
+            }
+            getName(name){
+                return this.name;
+            }
+            getGender(gender){
+                return this.gender;
+            }
+            getWeight(weight){
+                return this.weight;
+
+            }
+            setApple(apple){
+                this.apple = apple;
+            }
+            getAppleInfo(){
+                return this.apple.getPiece();
+            }
+            eat(){
+                if(this.status){
+                    this.weight++;
+                    document.write(this.name + this.say +"<br/>");
+                }
+            }
+            oneshot(){
+                this.status == true;
+                return this.apple.decrease();
+            }
+           
+        } let adam = new Human("Adam", "myturn", "male", 50)
+        let eva = new Human("Eva","give me", "femal", 45);
+        let apple = new Apple();
+        adam.setApple(apple);
+        eva.setApple(apple);
+
+        for(let i = 0; i<10 ;i++){
+    
+                eva.eat();
+            eva.oneshot();
+            document.write('cân nặng của Eva:' +eva.getWeight()+ " "+ "cân nặng của táo:" +eva.getAppleInfo()+"<br/>");
+           
+            
+        }
+    </script>
+</body>
+</html>
